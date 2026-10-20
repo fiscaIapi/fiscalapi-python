@@ -116,7 +116,7 @@ O certificado A1 precisa ser de um participante da nota (emitente, destinatário
 
 ```python
 sigef = api.consultar_sigef(cpf="12345678909")
-for parcela in sigef["result"]["parcelas"]:
+for parcela in (sigef["result"] or {}).get("parcelas", []):
     print(parcela["denominacao"], parcela["area_ha"], parcela["municipio"], parcela["uf"])
 
 parcela = api.consultar_sigef_parcela("0f1e2d3c-4b5a-6978-8a9b-0c1d2e3f4a5b")
