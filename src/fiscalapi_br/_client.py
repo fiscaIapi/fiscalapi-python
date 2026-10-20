@@ -24,9 +24,9 @@ from ._version import __version__
 from .types import (
     CertidaoFederalResponse,
     CertidoesTodasResponse,
-    CnirResponse,
     CNDResponse,
     CNDTodosResponse,
+    CnirResponse,
     CNPJResponse,
     ConsultaIEResponse,
     ConsultaIETodosResponse,
